@@ -1,4 +1,4 @@
-import logo from "../assets/img/icon-dabingfit.png";
+import logo from "../assets/img/logo.png";
 import { useState, useRef, useEffect } from "react";
 import Button from "./Button";
 import { Link } from "react-router"; // Pastikan ini Link dari react-router-dom
@@ -60,16 +60,16 @@ const Header = () => {
   }, [isMenuTop]);
 
   return (
-    <div className="w-full h-auto p-4 flex flex-col gap-4">
+    <div className="z-10 w-full h-auto p-4 flex flex-col gap-4">
       <div
         ref={headerContainerRef} // Pasang ref di div header yang ingin diukur
-        className="bg-sec h-[75px] rounded-[14px] relative flex justify-between items-center p-4 "
+        className="bg-third h-[75px] rounded-[14px] relative flex justify-between items-center p-4 "
       >
         <Link to="/">
           <img
             src={logo}
             alt="logo"
-            className="w-6 h-fit"
+            className="w-52"
           />
         </Link>
 
@@ -143,6 +143,7 @@ const Header = () => {
         className={`
           h-fit
           py-8
+          z-50
           bg-sec
           rounded-[14px]
           flex flex-col gap-4 items-center justify-start
@@ -154,7 +155,7 @@ const Header = () => {
           }
         `}
       >
-        <ul className="flex flex-col justify-center items-center gap-4">
+        <ul className="z-10 flex flex-col justify-center items-center gap-4">
           <li className="font-oswald text-pri">
             <Link to="/">Home</Link>
           </li>
