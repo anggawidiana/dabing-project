@@ -10,26 +10,26 @@ const Footer = () => {
         <img
           src={logo}
           alt=""
-          className="w-[50%]"
+          className="w-[50%] md:w-[20%]"
         />
-        <p className="text-center text-pri text-sm font-noto-sans font-extralight">
+        <p className="md:text-lg text-center text-pri text-sm font-noto-sans font-extralight">
           Temukan kebugaran Anda di Dabing Fitness Studio. Kami menawarkan
           panduan lengkap untuk pemula dan program latihan pribadi. Bergabunglah
           dengan komunitas kebugaran kami di Gianyar, Bali.
         </p>
       </div>
-      <div className="flex flex-col gap-5 px-12">
+      <div className="flex flex-col md:flex-row gap-5 md:gap-24 px-12">
         <div className="flex flex-col gap-2">
-          <h1 className="text-pri font-oswald">CONTACT US</h1>
-          <p className="text-pri font-noto-sans font-extralight text-sm">
+          <h1 className="text-pri font-oswald md:text-2xl">CONTACT US</h1>
+          <p className="text-pri md:text-lg font-noto-sans font-extralight text-sm">
             Address :Jl. Sinta 99X, Belakang Pengadilan Agama Gianyar Telphone
             :+6281938703129 Email :info@dabingfit.com Whatsapp ( Admin )
             :+6281938703129 Whatsapp ( Keluhan & Saran ) :+6281239646739
           </p>
         </div>
         <div className="flex flex-col gap-2">
-          <h1 className="text-pri font-oswald">OPENING HOURS</h1>
-          <p className="text-pri font-noto-sans font-extralight text-sm">
+          <h1 className="text-pri font-oswald md:text-2xl">OPENING HOURS</h1>
+          <p className="text-pri md:text-lg font-noto-sans font-extralight text-sm">
             Kami buka setiap hari mulai jam 6 pagi hingga 11 malam, memberi Anda
             fleksibilitas untuk berlatih kapan pun waktu Anda memungkinkan.
             Jadwalkan latihan Anda sekarang dan mulailah hari Anda dengan
@@ -37,8 +37,10 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-col gap-2">
-          <h1 className="text-pri font-oswald">FIND US ON SOCIAL MEDIA</h1>
-          <p className="text-pri font-noto-sans font-extralight text-sm">
+          <h1 className="text-pri font-oswald md:text-2xl">
+            FIND US ON SOCIAL MEDIA
+          </h1>
+          <p className="text-pri md:text-lg font-noto-sans font-extralight text-sm">
             Temukan kami di media sosial untuk tetap terhubung dan terinspirasi.
             Ikuti kami sekarang di platform favorit Anda dan bergabunglah dalam
             komunitas kebugaran Dabing Fitness Studio!
@@ -72,7 +74,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-[#111111] p-8 flex items-center justify-center">
-        <p className="text-center text-pri font-noto-sans font-extralight text-sm">
+        <p className="text-center md:text-lg text-pri font-noto-sans font-extralight text-sm">
           © Copyright 2025 Dabing Fitness Studio. All Rights Reserved. Ni Kadek
           Arik Ulandari - Dabing Fitness Studio
         </p>

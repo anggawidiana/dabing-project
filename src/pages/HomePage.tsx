@@ -16,25 +16,29 @@ const HomePage = () => {
   return (
     <div>
       <Header />
-      <div className=" bg-pri flex items-start justify-center">
+      <div className=" bg-third flex items-start justify-center pt-32">
         <ImageCarousel
           images={carouselImages}
           interval={4000}
         />{" "}
       </div>
       {/* Section1 */}
-      <div className="flex flex-col mt-8 ml-8 gap-4 max-w-[80vw]">
-        <div className="flex flex-col">
-          <h1 className="text-sec font-oswald">DABING FITNESS STUDIO</h1>
-          <h1 className="text-pri font-oswald text-2xl">REGISTER MEMBERSHIP</h1>
+      <div className="pb-16 md:justify-center md:items-center containerSatu flex flex-col mt-8 ml-8 md:mx-auto gap-4 max-w-[80vw]">
+        <div className="headingSatu flex flex-col">
+          <h1 className="text-sec font-oswald md:text-2xl md:text-center">
+            DABING FITNESS STUDIO
+          </h1>
+          <h1 className="text-pri font-oswald text-2xl md:text-4xl md:text-center">
+            REGISTER MEMBERSHIP
+          </h1>
         </div>
-        <p className="text-pri font-noto-sans font-extralight text-sm">
+        <p className="desc-1-1 md:text-center md:text-lg text-pri font-noto-sans font-extralight text-sm">
           Dengan Menjadi Member, Anda akan mendapatkan akses eksklusif ke
           fasilitas kebugaran berkualitas, beragam program latihan, dukungan
           instruktur berpengalaman, dan komunitas yang selalu siap memberikan
           motivasi. Berikut adalah beberapa benefit dari menjadi member kami :
         </p>
-        <div className="flex flex-col gap-4 my-4">
+        <div className="flex flex-col gap-4 my-4 md:flex-row">
           <div className="flex gap-4">
             <Icon
               icon="dumbbell"
@@ -46,6 +50,23 @@ const HomePage = () => {
                 Kami memiliki tim instruktur yang berpengalaman dan
                 berkualifikasi tinggi yang siap membimbing Anda dalam perjalanan
                 kebugaran Anda.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <Icon
+              icon="dumbbell"
+              bg="bg-sec"
+            />
+            <div className="flex flex-col gap-2">
+              <h1 className="text-pri font-oswald">
+                AKSES GRATIS KE SEMUA KELAS
+              </h1>
+              <p className="text-pri font-noto-sans font-extralight text-sm">
+                Rasakan pengalaman kebugaran terbaik dengan akses gratis ke
+                semua kelas kami! Dari Zumba yang energik, Boxing yang intens,
+                hingga Sesi Pengenalan Alat yang informatif, Anda bisa mencoba
+                semuanya tanpa biaya.
               </p>
             </div>
           </div>
@@ -94,10 +115,14 @@ const HomePage = () => {
       {/* Section2 */}
       <div className="flex flex-col mt-16 gap-4 max-w-full bg-pri px-8 py-16">
         <div className="flex flex-col">
-          <h1 className="text-sec font-oswald">DABING FITNESS STUDIO</h1>
-          <h1 className="text-third font-oswald text-2xl">PERSONAL TRAINER</h1>
+          <h1 className="text-sec font-oswald md:text-2xl">
+            DABING FITNESS STUDIO
+          </h1>
+          <h1 className="text-third font-oswald text-2xl md:text-4xl">
+            PERSONAL TRAINER
+          </h1>
         </div>
-        <p className="text-third font-noto-sans font-extralight text-sm">
+        <p className="text-third font-noto-sans font-extralight text-sm md:text-lg">
           Butuh dorongan ekstra dari ahlinya? Personal trainer bersertifikasi
           kami siap membantu Anda mencapai target kebugaran dengan program
           terarah dan motivasi ahli yang terbukti. Mulai transformasimu sekarang
@@ -114,14 +139,14 @@ const HomePage = () => {
       {/* Section3 */}
       <div className="flex flex-col gap-8 max-w-full bg-[#111111] px-8 py-16">
         <div className="flex flex-col">
-          <h1 className="text-sec font-oswald text-center">
+          <h1 className="text-sec font-oswald text-center md:text-2xl">
             DABING FITNESS STUDIO
           </h1>
-          <h1 className="text-pri font-oswald text-2xl text-center">
+          <h1 className="text-pri font-oswald text-2xl text-center md:text-4xl">
             Save Time, Improve Fitness, And Enjoy Exclusive Benefits!
           </h1>
         </div>
-        <p className="text-pri font-noto-sans font-extralight text-sm text-center">
+        <p className="text-pri md:text-lg font-noto-sans font-extralight text-sm text-center">
           Dengan aplikasi ini, Anda dapat memantau perkembangan kebugaran,
           mengakses jadwal kelas terbaru, dan mendapatkan panduan latihan di
           mana saja, kapan saja. Nikmati manfaat eksklusif seperti diskon,
@@ -133,6 +158,7 @@ const HomePage = () => {
             <Button
               text="DAFTAR MEMBERSHIP SEKARANG!"
               variant="default"
+              fontWeight="font-bold"
             />
           </div>
         </Link>
