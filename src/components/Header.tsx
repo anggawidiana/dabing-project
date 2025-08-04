@@ -60,7 +60,7 @@ const Header = () => {
   }, [isMenuTop]);
 
   return (
-    <div className="fixed z-10 w-full h-auto pb-4 pt-0 px-0 flex flex-col gap-4">
+    <div className="fixed z-[100] w-full h-auto pb-4 pt-0 px-0 flex flex-col gap-4">
       <div
         ref={headerContainerRef} // Pasang ref di div header yang ingin diukur
         className="bg-third h-[75px] relative flex justify-between items-center p-4 py-8 "
