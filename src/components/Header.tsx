@@ -60,10 +60,10 @@ const Header = () => {
   }, [isMenuTop]);
 
   return (
-    <div className="fixed z-10 w-full h-auto p-4 flex flex-col gap-4">
+    <div className="fixed z-10 w-full h-auto pb-4 pt-0 px-0 flex flex-col gap-4">
       <div
         ref={headerContainerRef} // Pasang ref di div header yang ingin diukur
-        className="bg-third h-[75px] rounded-[14px] relative flex justify-between items-center p-4 "
+        className="bg-third h-[75px] relative flex justify-between items-center p-4 py-8 "
       >
         <Link to="/">
           <img
@@ -75,24 +75,24 @@ const Header = () => {
 
         <div className="hidden gap-4 md:flex">
           <ul className="flex  justify-center items-center gap-4">
-            <li className="font-oswald text-pri">
+            <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
               <Link to="/">Home</Link>
             </li>
-            <li className="font-oswald text-pri">
+            <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
               <Link to="/about-us">About Us</Link>
             </li>
-            <li className="font-oswald text-pri">
+            <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
               <Link to="/membership">Membership</Link>{" "}
               {/* Perbaiki link contoh */}
             </li>
-            <li className="font-oswald text-pri">
+            <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
               <Link to="/personal-trainer">Personal Trainer</Link>{" "}
               {/* Perbaiki link contoh */}
             </li>
-            <li className="font-oswald text-pri">
+            <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
               <Link to="/blog">Blog</Link> {/* Perbaiki link contoh */}
             </li>
-            <li className="font-oswald text-pri">
+            <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
               <Link to="/gallery">Gallery</Link> {/* Perbaiki link contoh */}
             </li>
           </ul>
@@ -156,24 +156,24 @@ const Header = () => {
         `}
       >
         <ul className="z-10 flex flex-col justify-center items-center gap-4">
-          <li className="font-oswald text-pri">
+          <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
             <Link to="/">Home</Link>
           </li>
-          <li className="font-oswald text-pri">
+          <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
             <Link to="/about-us">About Us</Link>
           </li>
-          <li className="font-oswald text-pri">
+          <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
             <Link to="/membership">Membership</Link>{" "}
             {/* Perbaiki link contoh */}
           </li>
-          <li className="font-oswald text-pri">
+          <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
             <Link to="/personal-trainer">Personal Trainer</Link>{" "}
             {/* Perbaiki link contoh */}
           </li>
-          <li className="font-oswald text-pri">
+          <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
             <Link to="/blog">Blog</Link> {/* Perbaiki link contoh */}
           </li>
-          <li className="font-oswald text-pri">
+          <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
             <Link to="/gallery">Gallery</Link> {/* Perbaiki link contoh */}
           </li>
         </ul>

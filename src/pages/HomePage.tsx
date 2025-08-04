@@ -4,6 +4,11 @@ import Button from "../components/Button";
 import { Link } from "react-router";
 import Icon from "../components/Icon";
 import Footer from "../components/Footer";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const carouselImages = [
   "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -13,6 +18,83 @@ const carouselImages = [
 ];
 
 const HomePage = () => {
+  const Section1Ref = useRef<HTMLDivElement>(null);
+  const Section2Ref = useRef<HTMLDivElement>(null);
+  const Section3Ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
+    if (Section1Ref.current) {
+      gsap.fromTo(
+        Section1Ref.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: Section1Ref.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none",
+            markers: true, // Untuk debugging, bisa diaktifkan sementara
+          },
+        }
+      );
+    }
+    if (Section2Ref.current) {
+      gsap.fromTo(
+        Section2Ref.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: Section2Ref.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none",
+            markers: true, // Untuk debugging, bisa diaktifkan sementara
+          },
+        }
+      );
+    }
+    if (Section3Ref.current) {
+      gsap.fromTo(
+        Section3Ref.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: Section3Ref.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none",
+            markers: true, // Untuk debugging, bisa diaktifkan sementara
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <div>
       <Header />
@@ -23,8 +105,14 @@ const HomePage = () => {
         />{" "}
       </div>
       {/* Section1 */}
-      <div className="pb-16 md:justify-center md:items-center containerSatu flex flex-col mt-8 ml-8 md:mx-auto gap-4 max-w-[80vw]">
-        <div className="headingSatu flex flex-col">
+      <div
+        ref={Section1Ref}
+        className="pb-16 md:justify-center md:items-center containerSatu flex flex-col mt-8 ml-8 md:mx-auto gap-4 max-w-[80vw]"
+      >
+        <div
+          id="h-1"
+          className="flex flex-col"
+        >
           <h1 className="text-sec font-oswald md:text-2xl md:text-center">
             DABING FITNESS STUDIO
           </h1>
@@ -113,7 +201,10 @@ const HomePage = () => {
       </div>
       {/* Section1 */}
       {/* Section2 */}
-      <div className="flex flex-col mt-16 gap-4 max-w-full bg-pri px-8 py-16">
+      <div
+        ref={Section2Ref}
+        className="flex flex-col mt-16 gap-4 max-w-full bg-pri px-8 py-16"
+      >
         <div className="flex flex-col">
           <h1 className="text-sec font-oswald md:text-2xl">
             DABING FITNESS STUDIO
@@ -122,7 +213,7 @@ const HomePage = () => {
             PERSONAL TRAINER
           </h1>
         </div>
-        <p className="text-third font-noto-sans font-extralight text-sm md:text-lg">
+        <p className="text-third md:w-[50%] font-noto-sans font-extralight text-sm md:text-lg">
           Butuh dorongan ekstra dari ahlinya? Personal trainer bersertifikasi
           kami siap membantu Anda mencapai target kebugaran dengan program
           terarah dan motivasi ahli yang terbukti. Mulai transformasimu sekarang
@@ -137,7 +228,10 @@ const HomePage = () => {
       </div>
       {/* Section2 */}
       {/* Section3 */}
-      <div className="flex flex-col gap-8 max-w-full bg-[#111111] px-8 py-16">
+      <div
+        ref={Section3Ref}
+        className="flex flex-col md:items-center md:justify-center gap-8 max-w-full bg-[#111111] px-8 py-16"
+      >
         <div className="flex flex-col">
           <h1 className="text-sec font-oswald text-center md:text-2xl">
             DABING FITNESS STUDIO
@@ -146,7 +240,7 @@ const HomePage = () => {
             Save Time, Improve Fitness, And Enjoy Exclusive Benefits!
           </h1>
         </div>
-        <p className="text-pri md:text-lg font-noto-sans font-extralight text-sm text-center">
+        <p className="text-pri md:text-lg md:w-[80%] font-noto-sans font-extralight text-sm text-center">
           Dengan aplikasi ini, Anda dapat memantau perkembangan kebugaran,
           mengakses jadwal kelas terbaru, dan mendapatkan panduan latihan di
           mana saja, kapan saja. Nikmati manfaat eksklusif seperti diskon,
