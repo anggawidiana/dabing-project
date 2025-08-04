@@ -15,23 +15,23 @@ const AboutUsPage = () => {
             alt="Gym background"
             className="w-screen h-[40vh] md:h-[60vh] object-cover"
           />
-          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-oswald text-2xl text-white z-50">
-            Tentang Kami
+          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-oswald text-2xl md:text-8xl text-white z-50">
+            TENTANG KAMI
           </h1>
         </div>
 
         {/* Bagian deskripsi teks */}
-        <div className="flex flex-col gap-4 px-8 max-w-4xl mx-auto">
+        <div className="flex flex-col gap-4 px-8 max-w-4xl md:max-w-none mx-auto">
           {" "}
           {/* Menambahkan max-w dan mx-auto untuk centering pada layar besar */}
-          <p className="text-center text-pri font-noto-sans font-extralight text-sm">
+          <p className="text-center text-pri font-noto-sans font-extralight text-sm md:text-lg">
             Selamat datang di [Nama Gym Anda]! Lebih dari sekadar tempat
             berolahraga, kami adalah komunitas yang berdedikasi untuk membantu
             Anda meraih potensi kebugaran terbaik. Misi kami sederhana:
             menyediakan lingkungan yang inspiratif, fasilitas kelas dunia, dan
             dukungan ahli untuk setiap langkah perjalanan kesehatan Anda.
           </p>
-          <p className="text-center text-pri font-noto-sans font-extralight text-sm">
+          <p className="text-center text-pri font-noto-sans font-extralight text-sm md:text-lg">
             Didirikan pada [Tahun Didirikan, jika relevan] di [Lokasi/Kota
             Anda], kami percaya bahwa kebugaran adalah tentang memberdayakan
             diri sendiri. Kami bangga menjadi rumah bagi para trainer
@@ -39,29 +39,6 @@ const AboutUsPage = () => {
             yang saling mendukung. Bersama-sama, kita bangun versi terbaik dari
             diri kita, satu latihan pada satu waktu.
           </p>
-        </div>
-
-        {/* Bagian embed video */}
-        <div className="flex justify-center px-8 pb-8">
-          {" "}
-          {/* Menambahkan padding horizontal dan bawah */}
-          {/* Wrapper untuk video responsif */}
-          <div
-            className="relative w-full max-w-2xl"
-            style={{ paddingTop: "56.25%" }}
-          >
-            {" "}
-            {/* Rasio aspek 16:9 (9 / 16 * 100%) */}
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/xJ_fFLgGHiU?si=oqM38xmH84YIiyAR"
-              title="YouTube video player"
-              frameBorder="0" // Perbaikan: camelCase
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin" // Perbaikan: camelCase
-              allowFullScreen // Perbaikan: camelCase
-            ></iframe>
-          </div>
         </div>
       </div>
       {/* Section2 */}
@@ -77,7 +54,7 @@ const AboutUsPage = () => {
             WHY CHOOSE US?
           </h1>
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-center">
           <CardAbout
             H1="Pemahaman Pemula"
             iconBG="bg-[#3C3C3C]"
@@ -109,6 +86,28 @@ const AboutUsPage = () => {
         </div>
       </div>
       {/* Section2 */}
+      {/* Bagian embed video */}
+      <div className="flex justify-center px-8 pb-8">
+        {" "}
+        {/* Menambahkan padding horizontal dan bawah */}
+        {/* Wrapper untuk video responsif */}
+        <div
+          className="relative w-full max-w-2xl md:max-w-none"
+          style={{ paddingTop: "56.25%" }}
+        >
+          {" "}
+          {/* Rasio aspek 16:9 (9 / 16 * 100%) */}
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/xJ_fFLgGHiU?si=oqM38xmH84YIiyAR"
+            title="YouTube video player"
+            frameBorder="0" // Perbaikan: camelCase
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin" // Perbaikan: camelCase
+            allowFullScreen // Perbaikan: camelCase
+          ></iframe>
+        </div>
+      </div>
       <Footer />
     </>
   );
