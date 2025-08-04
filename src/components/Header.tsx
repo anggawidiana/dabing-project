@@ -96,10 +96,12 @@ const Header = () => {
               <Link to="/gallery">Gallery</Link> {/* Perbaiki link contoh */}
             </li>
           </ul>
-          <Button
-            text="Daftar Membership"
-            variant="default"
-          />
+          <a href="https://member.dabingfit.com/#/">
+            <Button
+              text="Daftar Membership"
+              variant="default"
+            />
+          </a>
         </div>
 
         <svg
@@ -177,10 +179,12 @@ const Header = () => {
             <Link to="/gallery">Gallery</Link> {/* Perbaiki link contoh */}
           </li>
         </ul>
-        <Button
-          text="Daftar Membership"
-          variant="default"
-        />
+        <a href="https://member.dabingfit.com/#/">
+          <Button
+            text="Daftar Membership"
+            variant="default"
+          />
+        </a>
       </div>
     </div>
   );
