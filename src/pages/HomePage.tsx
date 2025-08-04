@@ -42,7 +42,7 @@ const HomePage = () => {
             start: "top 80%",
             end: "bottom 20%",
             toggleActions: "play none none",
-            markers: true, // Untuk debugging, bisa diaktifkan sementara
+            // markers: true, // Untuk debugging, bisa diaktifkan sementara
           },
         }
       );
