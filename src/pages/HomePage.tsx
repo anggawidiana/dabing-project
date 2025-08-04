@@ -2,11 +2,11 @@ import Header from "../components/Header";
 import ImageCarousel from "../components/ImageCarousel";
 import Button from "../components/Button";
 import { Link } from "react-router";
-import Icon from "../components/Icon";
 import Footer from "../components/Footer";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import IconSVG from "../components/IconSVG";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -126,11 +126,12 @@ const HomePage = () => {
           instruktur berpengalaman, dan komunitas yang selalu siap memberikan
           motivasi. Berikut adalah beberapa benefit dari menjadi member kami :
         </p>
-        <div className="flex flex-col gap-4 my-4 md:flex-row">
+        <div className="flex flex-col gap-4 md:gap-8 my-4 md:flex-row">
           <div className="flex gap-4">
-            <Icon
-              icon="dumbbell"
-              bg="bg-sec"
+            <IconSVG
+              type="dumbbell"
+              color="white"
+              style="w-16 md:w-21 h-full p-2 bg-sec"
             />
             <div className="flex flex-col gap-2">
               <h1 className="text-pri font-oswald">AKSES FASILITAS PREMIUM</h1>
@@ -142,9 +143,10 @@ const HomePage = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <Icon
-              icon="dumbbell"
-              bg="bg-sec"
+            <IconSVG
+              type="dumbbell"
+              style="w-24 h-full p-2 bg-sec"
+              color="white"
             />
             <div className="flex flex-col gap-2">
               <h1 className="text-pri font-oswald">
@@ -159,9 +161,10 @@ const HomePage = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <Icon
-              icon="medal"
-              bg="bg-sec"
+            <IconSVG
+              type="medal"
+              color="white"
+              style="w-20 h-full p-2 bg-sec"
             />
             <div className="flex flex-col gap-2">
               <h1 className="text-pri font-oswald">
@@ -175,9 +178,10 @@ const HomePage = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <Icon
-              icon="community"
-              bg="bg-sec"
+            <IconSVG
+              type="community"
+              color="white"
+              style="w-24 h-full p-2 bg-sec"
             />
             <div className="flex flex-col gap-2">
               <h1 className="text-pri font-oswald">

@@ -1,7 +1,11 @@
 import Header from "../components/Header";
 
 const BlogPage = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default BlogPage;
