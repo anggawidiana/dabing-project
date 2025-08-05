@@ -253,11 +253,13 @@ const HomePage = () => {
         </p>
         <Link to="/personal-trainer">
           <div className="flex items-center justify-center">
-            <Button
-              text="DAFTAR MEMBERSHIP SEKARANG!"
-              variant="default"
-              fontWeight="font-bold"
-            />
+            <a href="https://member.dabingfit.com/#/">
+              <Button
+                text="DAFTAR MEMBERSHIP SEKARANG!"
+                variant="default"
+                fontWeight="font-bold"
+              />
+            </a>
           </div>
         </Link>
       </div>
