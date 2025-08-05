@@ -39,7 +39,7 @@ const HomePage = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: Section1Ref.current,
-            start: "top 80%",
+            start: "top 100%",
             end: "bottom 20%",
             toggleActions: "play none none",
             // markers: true, // Untuk debugging, bisa diaktifkan sementara

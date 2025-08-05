@@ -2,10 +2,46 @@ import logo from "../assets/img/logo.png";
 import facebook from "../assets/img/icons/fb.png";
 import tiktok from "../assets/img/icons/tiktok.png";
 import instagram from "../assets/img/icons/ig.png";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
+  const section = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
+    if (section.current) {
+      gsap.fromTo(
+        section.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: section.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none",
+            // markers: true, // Untuk debugging, bisa diaktifkan sementara
+          },
+        }
+      );
+    }
+  }, []);
   return (
-    <div className="mt-16 flex flex-col gap-8">
+    <div
+      ref={section}
+      className="mt-16 flex flex-col gap-8"
+    >
       <div className="flex flex-col gap-4 px-8 items-center justify-center">
         <img
           src={logo}
