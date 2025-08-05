@@ -40,7 +40,7 @@ const CardAbout = (props: CardInfo) => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: card.current,
-            start: "top 50%",
+            start: "top 60%",
             end: "bottom 20%",
             toggleActions: "play none none",
             // markers: true, // Untuk debugging, bisa diaktifkan sementara

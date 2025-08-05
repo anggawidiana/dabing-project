@@ -29,10 +29,10 @@ const PtCard = (props: PtCardProps) => {
           y: 0,
           duration: 1,
           stagger: 0.2,
-          ease: "power2.out",
+          ease: "power1.inOut",
           scrollTrigger: {
             trigger: card.current,
-            start: "top 60%",
+            start: "top 80%",
             end: "bottom 20%",
             toggleActions: "play none none",
             // markers: true, // Untuk debugging, bisa diaktifkan sementara
