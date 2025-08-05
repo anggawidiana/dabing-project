@@ -1,4 +1,7 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
+import PtCard from "../components/PtCard";
+import { cardData } from "../components/data/personalTrainerData";
 
 const PersonalTrainerPage = () => {
   return (
@@ -49,7 +52,19 @@ const PersonalTrainerPage = () => {
           </h1>
         </div>
       </div>
+
+      <div className="flex flex-wrap gap-8 md:gap-4 pt-8 px-8 items-center justify-center">
+        {cardData.map((card) => (
+          <PtCard
+            key={card.id} // Gunakan properti unik sebagai key
+            img={card.img}
+            h1={card.h1}
+            para={card.para}
+          />
+        ))}
+      </div>
       {/* Section2 */}
+      <Footer />
     </>
   );
 };

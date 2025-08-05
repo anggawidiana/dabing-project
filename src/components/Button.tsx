@@ -5,6 +5,7 @@ type ButtonProps = {
   variant?: "default" | "first" | "second"; // Make sure these match your `buttonStyles` keys
   fontWeight?: string;
   className?: string; // <--- ADD THIS LINE
+  onClick?: () => void;
 };
 
 const buttonStyles = {
@@ -22,6 +23,7 @@ const Button = ({
   variant = "default",
   fontWeight,
   className,
+  onClick,
 }: ButtonProps) => {
   // <--- ADD `className` here and set default variant
   // Determine the base classes from buttonStyles
@@ -31,6 +33,7 @@ const Button = ({
   // Use template literals for cleaner concatenation
   const finalClasses = `${baseVariantClasses} ${fontWeight || ""} ${
     className || ""
+  } ${onClick}
   }`.trim();
 
   return (
