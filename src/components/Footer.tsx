@@ -82,7 +82,7 @@ const Footer = () => {
             komunitas kebugaran Dabing Fitness Studio!
           </p>
           <div className="flex gap-2">
-            <a href="">
+            <a href="https://www.facebook.com/dabing.fitness">
               <div className="rounded-full bg-pri w-8 h-8 flex items-center justify-center">
                 <img
                   src={facebook}
@@ -90,7 +90,7 @@ const Footer = () => {
                 />
               </div>
             </a>
-            <a href="">
+            <a href="https://www.tiktok.com/@dabing.fitnessofficial">
               <div className="rounded-full bg-pri w-8 h-8 flex items-center justify-center">
                 <img
                   src={tiktok}
@@ -98,7 +98,7 @@ const Footer = () => {
                 />
               </div>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/dabing.fitnessofficial?igsh=dzU1aXAzajM1bGE4">
               <div className="rounded-full bg-pri w-8 h-8 flex items-center justify-center">
                 <img
                   src={instagram}
