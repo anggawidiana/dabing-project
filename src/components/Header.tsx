@@ -60,7 +60,7 @@ const Header = () => {
   }, [isMenuTop]);
 
   return (
-    <div className="fixed z-[100] w-full h-auto pb-4 pt-0 px-0 flex flex-col gap-4">
+    <header className="fixed z-[100] w-full h-auto pb-4 pt-0 px-0 flex flex-col gap-4">
       <div
         ref={headerContainerRef} // Pasang ref di div header yang ingin diukur
         className="bg-third h-[75px] relative flex justify-between items-center p-4 py-8 "
@@ -73,7 +73,7 @@ const Header = () => {
           />
         </Link>
 
-        <div className="hidden gap-4 md:flex">
+        <nav className="hidden gap-4 md:flex">
           <ul className="flex  justify-center items-center gap-4">
             <li className="font-oswald text-pri hover:border-b-2 hover:border-white">
               <Link to="/">Home</Link>
@@ -102,7 +102,7 @@ const Header = () => {
               variant="default"
             />
           </a>
-        </div>
+        </nav>
 
         <svg
           ref={menuIconRef}
@@ -135,7 +135,7 @@ const Header = () => {
         </svg>
       </div>
 
-      <div
+      <nav
         ref={menuRef}
         // Atur lebar dan posisi kiri menggunakan style inline
         style={{
@@ -185,8 +185,8 @@ const Header = () => {
             variant="default"
           />
         </a>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 

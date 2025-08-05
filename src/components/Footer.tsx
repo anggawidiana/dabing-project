@@ -38,7 +38,7 @@ const Footer = () => {
     }
   }, []);
   return (
-    <div
+    <footer
       ref={section}
       className="mt-16 flex flex-col gap-8"
     >
@@ -115,7 +115,7 @@ const Footer = () => {
           Arik Ulandari - Dabing Fitness Studio
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

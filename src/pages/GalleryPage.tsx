@@ -122,8 +122,8 @@ const GalleryPage = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen py-12 px-4 pt-32">
-        <main className="container mx-auto">
+      <main className="min-h-screen py-12 px-4 pt-32">
+        <section className="container mx-auto">
           <h1 className="text-4xl font-bold text-center text-pri mb-12 font-oswald">
             Galeri
           </h1>
@@ -149,7 +149,7 @@ const GalleryPage = () => {
               </div>
             ))}
           </div>
-        </main>
+        </section>
 
         {/* Modal, hanya ditampilkan jika isModalOpen bernilai true */}
         {isModalOpen && selectedImage && (
@@ -176,7 +176,7 @@ const GalleryPage = () => {
             </div>
           </div>
         )}
-      </div>
+      </main>
     </>
   );
 };
