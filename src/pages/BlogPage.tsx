@@ -9,7 +9,7 @@ const BlogPage = () => {
       <Header />
       <div className="pt-32 flex flex-col gap-4 justify-center items-center">
         <SearchBar />
-        <div className="flex flex-wrap justify-center items-center gap-8 ">
+        <div className="flex flex-wrap justify-center items-center gap-8 px-8 ">
           <BlogCard
             h1="Cara Menjadi Kuat"
             para="lorem ipsum adsajsd dasudhas dsauhd duaihsd saduahsd duashdasu"
