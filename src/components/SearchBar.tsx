@@ -1,6 +1,6 @@
 const SearchBar = () => {
   return (
-    <form className="w-full px-16">
+    <form className="w-full px-8">
       {/* Label ini tetap untuk aksesibilitas, tidak terlihat secara visual */}
       <label
         htmlFor="default-search"
