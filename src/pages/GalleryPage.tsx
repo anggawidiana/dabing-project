@@ -1,5 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Definisikan tipe data untuk setiap item gambar
 interface ImageItem {
@@ -79,6 +83,30 @@ const GalleryPage = () => {
   // State untuk menyimpan gambar yang saat ini dipilih
   const [selectedImage, setSelectedImage] = useState<ImageItem | null>(null);
 
+  // useEffect untuk animasi GSAP
+  useEffect(() => {
+    // Memberikan class pada setiap item untuk memudahkan penargetan oleh GSAP
+    gsap.fromTo(
+      ".gallery-item",
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.2, // Mengatur jeda antara setiap animasi item
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".gallery-grid", // Menargetkan kontainer grid sebagai pemicu
+          start: "top 60%", // Animasi dimulai saat kontainer masuk 60% ke dalam viewport
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   // Fungsi untuk membuka modal dan menyimpan gambar yang diklik
   const openModal = (image: ImageItem) => {
     setSelectedImage(image);
@@ -94,28 +122,26 @@ const GalleryPage = () => {
   return (
     <>
       <Header />
-      {/* Catatan: Komponen Header telah diabaikan sesuai permintaan Anda */}
-      {/* Header, jika Anda ingin menambahkannya kembali, bisa di sini */}
-      <div className=" min-h-screen py-12 px-4 pt-32">
+      <div className="min-h-screen py-12 px-4 pt-32">
         <main className="container mx-auto">
           <h1 className="text-4xl font-bold text-center text-pri mb-12 font-oswald">
             Galeri
           </h1>
 
-          {/* Grid untuk menampilkan gambar */}
-          <div className=" columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          {/* Grid untuk menampilkan gambar dengan class pemicu animasi */}
+          <div className="gallery-grid columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {galleryImages.map((image) => (
               <div
                 key={image.id}
-                className="relative overflow-hidden rounded-lg shadow-md cursor-pointer group"
+                className="gallery-item relative overflow-hidden rounded-lg shadow-md cursor-pointer group break-inside-avoid"
                 onClick={() => openModal(image)}
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-auto transform transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-opacity-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-white text-lg font-semibold">
                     {image.alt}
                   </span>
@@ -128,7 +154,7 @@ const GalleryPage = () => {
         {/* Modal, hanya ditampilkan jika isModalOpen bernilai true */}
         {isModalOpen && selectedImage && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-20 p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4"
             onClick={closeModal} // Tutup modal saat mengklik di luar gambar
           >
             <div
