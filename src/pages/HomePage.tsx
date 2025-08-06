@@ -254,17 +254,15 @@ const HomePage = () => {
             hadiah, dan komunikasi langsung dengan instruktur dan komunitas
             anggota kami.
           </p>
-          <Link to="/personal-trainer">
-            <div className="flex items-center justify-center">
-              <a href="https://member.dabingfit.com/#/">
-                <Button
-                  text="DAFTAR MEMBERSHIP SEKARANG!"
-                  variant="default"
-                  fontWeight="font-bold"
-                />
-              </a>
-            </div>
-          </Link>
+          <div className="flex items-center justify-center">
+            <a href="https://member.dabingfit.com/#/">
+              <Button
+                text="DAFTAR MEMBERSHIP SEKARANG!"
+                variant="default"
+                fontWeight="font-bold"
+              />
+            </a>
+          </div>
         </section>
         {/* Section3 */}
       </main>
