@@ -56,12 +56,14 @@ const CardAbout = (props: CardInfo) => {
     >
       <IconSVG
         color={props.iconColor}
-        style={`w-8 h-8 p-2 ${props.iconBG}`}
+        style={`w-8 md:w-12 h-8 md:h-12 p-2 md:p-3 ${props.iconBG}`}
         type={props.iconType || "dumbbell"}
       />
       <div className="flex flex-col gap-2">
-        <h1 className="text-pri font-oswald text-center">{props.H1}</h1>
-        <p className="text-pri text-center font-noto-sans font-extralight text-sm w-48">
+        <h1 className="text-pri font-oswald text-center md:text-2xl">
+          {props.H1}
+        </h1>
+        <p className="text-pri text-center font-noto-sans font-extralight text-sm md:text-lg w-48">
           {props.para}
         </p>
       </div>
