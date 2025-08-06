@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import IconSVG from "../components/IconSVG";
-import whatsapp from "../assets/img/whatsapp 1.png";
+import whatsapp from "../assets/img/whatsapp.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,7 +102,7 @@ const HomePage = () => {
         <img
           src={whatsapp}
           alt=""
-          className="fixed bottom-4 right-4 z-100"
+          className="fixed bottom-8 right-8 z-100 w-12 h-12"
         />
       </a>
       <Header />
