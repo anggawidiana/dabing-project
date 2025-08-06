@@ -276,6 +276,55 @@ const HomePage = () => {
           </div>
         </section>
         {/* Section3 */}
+        {/* Maps */}
+        /* Contoh struktur kode HTML/JSX */ // ... (Bagian sebelumnya, seperti
+        Section3)
+        {/* Section Maps */}
+        <section className="flex flex-col md:items-center md:justify-center gap-8 max-w-full bg-third px-8 py-16">
+          {/* Header Section Maps */}
+          <div className="text-center">
+            <h2 className="text-pri font-oswald text-2xl md:text-4xl">
+              LOKASI DABING FITNESS STUDIO
+            </h2>
+          </div>
+
+          {/* Konten Maps */}
+          <div className="w-full md:w-[80%] h-[400px] rounded-lg overflow-hidden shadow-lg">
+            {/* Frame Google Maps */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.508670777837!2d115.31277567416828!3d-8.546985686643147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd21733855e72a9%3A0xc706f02ff2976129!2sDabing%20Fitness%20Studio!5e0!3m2!1sen!2sid!4v1754481900832!5m2!1sen!2sid"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          {/* Tombol atau Informasi Tambahan */}
+          <div className="flex flex-col md:flex-row gap-4">
+            <a
+              href="https://maps.app.goo.gl/1Y46v4oM6srbkTDm6"
+              target="_blank"
+            >
+              {" "}
+              {/* Ganti dengan tautan langsung ke Google Maps */}
+              <Button
+                text="Lihat di Google Maps"
+                variant="default"
+              />
+            </a>
+
+            <a href="https://wa.me/6281938703129">
+              {" "}
+              {/* Contoh tautan WhatsApp */}
+              <Button
+                text="Hubungi Kami"
+                variant="second"
+              />
+            </a>
+          </div>
+        </section>
+        // ... (Bagian Footer)
+        {/* Maps */}
       </main>
       {/* Footer */}
       <Footer />
