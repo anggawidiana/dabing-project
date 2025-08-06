@@ -153,13 +153,16 @@ const HomePage = () => {
               />
               <div className="flex flex-col gap-2">
                 <h1 className="text-pri font-oswald">
-                  AKSES GRATIS KE SEMUA KELAS
+                  AKSES GRATIS KE BEBERAPA KELAS
                 </h1>
                 <p className="text-pri font-noto-sans font-extralight text-sm">
                   Rasakan pengalaman kebugaran terbaik dengan akses gratis ke
-                  semua kelas kami! Dari Zumba yang energik, Boxing yang intens,
-                  hingga Sesi Pengenalan Alat yang informatif, Anda bisa mencoba
-                  semuanya tanpa biaya.
+                  semua kelas kami! Dari{" "}
+                  <span className="font-bold">Zumba</span> yang energik,{" "}
+                  <span className="font-bold">Yoga</span>,{" "}
+                  <span className="font-bold">Cardio Dance</span>, hingga{" "}
+                  <span className="font-bold">FREE</span> 5 Sesi Pengenalan Alat
+                  yang informatif, Anda bisa mencoba semuanya tanpa biaya.
                 </p>
               </div>
             </div>
