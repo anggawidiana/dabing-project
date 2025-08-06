@@ -22,6 +22,7 @@ const HomePage = () => {
   const Section1Ref = useRef<HTMLDivElement>(null);
   const Section2Ref = useRef<HTMLDivElement>(null);
   const Section3Ref = useRef<HTMLDivElement>(null);
+  const Section4Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     ScrollTrigger.refresh();
@@ -86,6 +87,29 @@ const HomePage = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: Section3Ref.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none",
+            // markers: true, // Untuk debugging, bisa diaktifkan sementara
+          },
+        }
+      );
+    }
+    if (Section4Ref.current) {
+      gsap.fromTo(
+        Section4Ref.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: Section4Ref.current,
             start: "top 80%",
             end: "bottom 20%",
             toggleActions: "play none none",
@@ -280,7 +304,10 @@ const HomePage = () => {
         /* Contoh struktur kode HTML/JSX */ // ... (Bagian sebelumnya, seperti
         Section3)
         {/* Section Maps */}
-        <section className="flex flex-col md:items-center md:justify-center gap-8 max-w-full bg-third px-8 py-16">
+        <section
+          ref={Section4Ref}
+          className="flex flex-col md:items-center md:justify-center gap-8 max-w-full bg-third px-8 py-16"
+        >
           {/* Header Section Maps */}
           <div className="text-center">
             <h2 className="text-pri font-oswald text-2xl md:text-4xl">
