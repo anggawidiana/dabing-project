@@ -12,7 +12,7 @@ const AboutUsPage = () => {
           {/* Bagian gambar dan teks "Tentang Kami" */}
           <div className="relative">
             <img
-              src="https://plus.unsplash.com/premium_photo-1661284821625-9400498df354?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1434754205268-ad3b5f549b11?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Gym background"
               className="w-screen h-[40vh] md:h-[60vh] object-cover"
             />
